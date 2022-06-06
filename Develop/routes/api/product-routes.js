@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     // be sure to include its associated Category and Tag data
     include: [
       {
-        mode: Category,
+        model: Category,
         attributes: [`id`, `category_name`]
       },
       {
@@ -38,7 +38,7 @@ router.get('/:id', (req, res) => {
     attributes: [`id`, `product_name`, `price`, `stock`, `category_id`],
     include: [
       {
-        mode: Category,
+        model: Category,
         attributes: [`id`, `category_name`]
       },
       {
